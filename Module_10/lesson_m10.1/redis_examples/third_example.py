@@ -18,3 +18,4 @@ alice_r.publish('classical_music', 'Alice 2nd Music')
 
 another_music = bob_p.get_message()['data']
 print(another_music)
+
