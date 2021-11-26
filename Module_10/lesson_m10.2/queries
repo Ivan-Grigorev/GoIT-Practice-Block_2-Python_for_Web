@@ -1,0 +1,80 @@
+1) db.getCollection('movies').find({'awards.wins':{$gt:2} , 'tomatoes.critic.rating': {$not:{$gt:7}}})
+
+2) db.getCollection('movies').find({genres: {$all: ['Drama', 'Crime']}, languages: /^E/}).count()
+
+3) db.restaurants.find( { borough: /a/, cuisine:"American", name:/^N/} )
+
+4) db.getCollection('movies').find({genres:"History", $or: [ {'awards.wins': {$gt : 1}}, {'imdb.rating':8 }]})
+
+5) db.createCollection("newcol", { capped : true, size : 6142800, max : 10000 } )
+
+6)db.getCollection('movies').find({title:/^B/}).sort({'year': -1}).limit(10)
+
+7) db.getCollection('movies').find({year: 1920}, {genres:0, cast:0})
+
+
+8) db.newcol.insertOne(
+ {
+  first_name: "Mike",
+  last_name: "Yatsenko",
+  date_of_start: "2021-10-26",
+  e_mail: "mike123@gmail.com",
+  phone: "12324455678" })
+
+9) db.empDetails.deleteOne({_id: ObjectId("619cb0e9484aea582dc70dba") })
+
+10) db.newcol.update({first_name:'Mike'},{$set :{first_name :'Mike2'}})
+
+11)db.getCollection('movies').find({title:/^B/}).sort({'year': -1}).limit(10)
+
+12) db.getCollection('empDetails').drop()
+
+13) db.dropDatabase()
+
+14)db.movies.aggregate([{ $match: { 'awards.wins': 2 }}])
+
+15) db.movies.aggregate([{$match: {released: {
+        $gte: ISODate("1925-01-01T00:00:00.000Z"),
+        $lt: ISODate("1950-01-31T23:59:59.000Z")}}}
+])
+
+16) db.movies.aggregate( [
+   { $match: {year: 1920} },
+   { $group: { _id: "$title", sumQuantity: { $sum: "$runtime" } } }
+] )
+
+
+17) db.movies.aggregate([
+  {
+    $match: {
+      year: {
+        $gte: 1920,
+        $lt: 1980
+      }
+    }
+  }, {
+    $group: {
+      _id: null,
+      total: {
+        $sum: "$runtime"
+      },
+      average_runtime: {
+        $avg: "$runtime"
+      },
+      min_runtime: {
+        $min: "$runtime"
+      },
+      max_runtime: {
+        $max: "$runtime"
+      }
+    }
+  }
+])
+
+
+
+
+
+
+
+
