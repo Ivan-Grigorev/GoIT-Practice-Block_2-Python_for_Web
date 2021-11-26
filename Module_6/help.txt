@@ -1,0 +1,4 @@
+services = (
+    Service('ipify, 'https://api.ipify.org?format=json', 'ip'),
+    Service('ipinfo', 'http://ipinfo.io/json', 'ip')
+    )
