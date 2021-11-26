@@ -1,0 +1,11 @@
+{% extends 'app/base.html' %}
+{%block content%}
+<h1 class="posttitle loader">{{post.title}}</h1>
+<p class="postcontent">{{post.content}}</p>
+<a class="btn btn-primary" href="{% url 'update' pk=post.pk%}"> Update
+    <span class="glyphicon glyphicon-pencil"></span>
+</a>
+<a class="btn btn-primary" href="{% url 'post_delete' pk=post.pk%}"> Delete
+    <span class="glyphicon glyphicon-remove"></span>
+</a>
+{%endblock%}
