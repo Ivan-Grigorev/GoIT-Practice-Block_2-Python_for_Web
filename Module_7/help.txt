@@ -1,0 +1,3 @@
+'http://api.worldweatheronline.com/premium/v1/weather.ashx'
+s.get('https://httpbin.org/cookies/set/sessioncookie/123456789')
+r = s.get("https://httpbin.org/cookies")
