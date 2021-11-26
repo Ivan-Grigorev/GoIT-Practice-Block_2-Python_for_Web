@@ -1,0 +1,41 @@
+-- creating product table
+CREATE TABLE product (
+    maker VARCHAR(120) NOT NULL,
+    model VARCHAR (128) NOT NULL PRIMARY KEY,
+    type VARCHAR (100) NOT NULL
+);
+
+
+-- creating pc table
+CREATE TABLE pc (
+    code INT NOT NULL PRIMARY KEY,
+    model VARCHAR (128) NOT NULL,
+	CONSTRAINT fk_pc_product FOREIGN KEY (model) REFERENCES product (model),
+	speed SMALLINT NOT NULL,
+	ram   SMALLINT NOT NULL,
+	hd    REAL NOT NULL,
+	price MONEY NOT NULL
+);
+
+-- creating laptop table
+CREATE TABLE laptop (
+    code INT NOT NULL PRIMARY KEY,
+    model VARCHAR (128) NOT NULL,
+	CONSTRAINT fk_laptop_product FOREIGN KEY (model) REFERENCES product (model),
+	speed SMALLINT NOT NULL,
+	ram   SMALLINT NOT NULL,
+	hd    REAL NOT NULL,
+	price MONEY NOT NULL,
+	screen INT NOT NULL
+);
+
+-- creating printer table
+CREATE TABLE printer (
+    code INT NOT NULL PRIMARY KEY,
+    model VARCHAR (128) NOT NULL,
+	CONSTRAINT fk_printer_product FOREIGN KEY (model) REFERENCES product (model),
+	color VARCHAR(1) NOT NULL,
+	type  VARCHAR(10) NOT NULL,
+	price MONEY NOT NULL
+
+);

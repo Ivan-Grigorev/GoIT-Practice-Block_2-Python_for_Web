@@ -1,0 +1,105 @@
+---first task
+Найдите номер модели, скорость и размер жесткого диска для всех ПК стоимостью менее 500 дол. Вывести: model, speed и hd
+
+SELECT model ,speed, hd, price
+FROM pc
+WHERE price < '500'
+
+---second task
+Найдите производителей принтеров. Вывести: maker
+
+SELECT maker
+FROM  product
+WHERE product.type = 'Printer'
+GROUP BY maker
+
+---third task
+Найдите номер модели, объем памяти и размеры экранов ноутбуков, цена которых превышает 1000 дол.
+
+SELECT model,ram,screen, price
+FROM laptop
+WHERE price > '1000'
+
+
+---fourth task
+Найдите все записи таблицы Printer для цветных принтеров.
+
+SELECT *
+FROM printer
+WHERE color = 'y'
+
+---fifth task
+Найдите номер модели, скорость и размер жесткого диска ПК, имеющих 150 или 200 HD и цену менее 600 дол.
+
+SELECT model ,speed , hd
+FROM pc
+WHERE (hd = 150 or hd = 200) AND price < '600'
+
+---sixth task
+Укажите производителя и скорость для тех ноутбуков, которые имеют жесткий диск объемом не менее 10 Гбайт.
+
+SELECT maker, speed
+FROM product INNER JOIN laptop on product.model = laptop.model
+where hd >= 10
+
+---seventh task
+
+Найдите производителей ПК с процессором не менее 1000 Мгц. Вывести: Maker
+
+SELECT maker
+FROM pc INNER JOIN product on pc.model = product.model
+WHERE speed >= 1000
+GROUP BY maker
+
+---eighth task
+
+Найдите среднюю скорость ПК-блокнотов, цена которых превышает или равна 1000 дол.
+
+SELECT AVG(speed)
+FROM laptop
+WHERE price >= '1000'
+
+---ninth task
+
+Найдите среднюю скорость ПК, выпущенных производителем Samsung
+
+SELECT AVG(speed)
+FROM pc INNER JOIN product ON pc.model= product.model
+WHERE maker = 'Samsung'
+GROUP BY maker
+
+---ten task
+
+Найдите максимальную цену ПК, выпускаемых каждым производителем. Вывести: maker, максимальная цена.
+
+SELECT maker , MAX(price) AS Max_price
+FROM pc INNER JOIN product ON pc.model= product.model
+GROUP BY maker
+
+---11 task
+Найдите производителя, выпускающего ноутбуки, но не ПК.
+
+SELECT maker FROM product
+WHERE type='Laptop' AND maker NOT IN
+(SELECT maker FROM product WHERE type = 'PC')
+GROUP BY maker
+
+--12 task
+Найдите номера моделей и цены всех продуктов (любого типа), выпущенных производителем Samsung
+
+
+SELECT laptop.model , laptop.price  FROM laptop INNER JOIN product ON laptop.model = product.model
+WHERE product.maker= 'Samsung'
+UNION
+SELECT pc.model , pc.price FROM pc INNER JOIN product ON pc.model = product.model
+WHERE product.maker= 'Samsung'
+UNION
+SELECT printer.model , printer.price FROM printer iNNER jOIN product ON printer.model = product.model
+WHERE product.maker= 'Samsung'
+
+
+
+
+
+
+

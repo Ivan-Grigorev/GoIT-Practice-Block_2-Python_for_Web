@@ -1,0 +1,2 @@
+INSERT INTO printer (code, model, color, type, price)
+VALUES (001, 13, 'y', 'laser', 200), (002, 14, 'y', 'matrix', 190), (003, 15, 'n', 'jet', 100), (004, 16, 'y', 'matrix', 145), (005, 17, 'y', 'laser', 450), (006, 18, 'n', 'matrix', 200)

@@ -1,0 +1,4 @@
+INSERT INTO product (maker, model, type)
+VALUES ('Samsung', 1, 'PC'), ('LG', 2, 'PC'), ('Sony', 3, 'PC'), ('Samsung', 4, 'PC'), ('Apple', 5, 'PC'), ('Apple', 6, 'PC'),
+('HP', 7, 'Laptop'), ('Google', 8, 'Laptop'), ('Lenovo', 9, 'Laptop'), ('Samsung', 10, 'Laptop'), ('Apple', 11, 'Laptop'), ('LG', 12, 'Laptop'),
+('Canon', 13, 'Printer'), ('Konica', 14, 'Printer'), ('HP', 15, 'Printer'), ('Samsung', 16, 'Printer'), ('Canon', 17, 'Printer'), ('HP', 18, 'Printer')
