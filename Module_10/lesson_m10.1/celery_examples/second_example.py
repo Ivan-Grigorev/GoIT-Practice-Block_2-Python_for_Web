@@ -1,6 +1,7 @@
 from celery import Celery
 import requests
 
+
 app = Celery('second_example', broker='pyamqp://guest@localhost//')
 
 
@@ -15,7 +16,6 @@ app.conf.beat_schedule = {
     'add-every-5-seconds': {
         'task': 'second_example.check',
         'schedule': 5.0,
-
     },
 }
 app.conf.timezone = 'UTC'

@@ -1,5 +1,6 @@
 from pymongo import MongoClient
 
+
 client = MongoClient('mongodb+srv://MikeYatsenko:v320@cluster0.jja9n.mongodb.net/myFirstDatabase?retryWrites=true&w'
                      '=majority')
 with client:
@@ -12,4 +13,4 @@ with client:
     query = {"salary": {"$lt": 50000}}
     d = workers.delete_many(query)
 
-    print(d.deleted_count, " documents deleted !!")
+    print(d.deleted_count, "documents deleted!")

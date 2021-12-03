@@ -35,7 +35,6 @@ def cash_analyzer(name, client):
     # If cache is found then serves the data from cache
     if data:
         print(f'{data.decode("utf-8")} and this country i took from cash')
-
     else:
         data = get_info_from_api(name)
         print(f'{data} and this country i took from api. Now im gonna cash it, try it later')

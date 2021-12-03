@@ -1,8 +1,8 @@
 import time
-
 import requests
 from bs4 import BeautifulSoup
 import redis
+
 
 r = redis.StrictRedis(host='localhost', port=6380, db=0)
 

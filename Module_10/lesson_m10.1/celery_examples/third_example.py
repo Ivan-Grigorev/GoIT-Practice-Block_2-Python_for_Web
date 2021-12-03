@@ -26,18 +26,14 @@ def get_from_storage():
         print(result)
 
 
-
 app.conf.beat_schedule = {
     'add-every-2-seconds': {
         'task': 'third_example.go_to_url',
         'schedule': 5,
-
     },
     'check-every-5-second': {
         'task': 'third_example.get_from_storage',
         'schedule': 5,
-
-
     }
 }
 

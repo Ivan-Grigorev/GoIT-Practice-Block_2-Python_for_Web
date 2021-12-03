@@ -1,4 +1,6 @@
 import redis
+
+
 # connect with redis server as Bob
 bob_r = redis.Redis(host='localhost', port=6379, db=0)
 bob_p = bob_r.pubsub()
@@ -18,4 +20,3 @@ alice_r.publish('classical_music', 'Alice 2nd Music')
 
 another_music = bob_p.get_message()['data']
 print(another_music)
-

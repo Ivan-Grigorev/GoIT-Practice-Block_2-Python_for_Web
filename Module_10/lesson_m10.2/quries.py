@@ -1,5 +1,6 @@
 from pymongo import MongoClient, DESCENDING, ASCENDING
 
+
 client = MongoClient('mongodb+srv://MikeYatsenko:v320@cluster0.jja9n.mongodb.net/myFirstDatabase?retryWrites=true&w'
                      '=majority')
 

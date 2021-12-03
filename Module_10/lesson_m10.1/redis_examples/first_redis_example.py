@@ -1,5 +1,7 @@
 import redis
 import time
+
+
 r = redis.StrictRedis(host='localhost', port=6380, db=0)
 
 r.set('test1', 5)
@@ -8,7 +10,7 @@ r.set('test1', 5)
 print(r.get('test1'))
 
 # уменьшаем значение test1 на 2 (если значение является int)
-print(r.decr('test1', 2)) # выдаст 3
+print(r.decr('test1', 2))  # выдаст 3
 
 # увеличивает значение test1 на 2 (если значение является int)
 print(r.incr('test1', 2))  # выдаст 5
