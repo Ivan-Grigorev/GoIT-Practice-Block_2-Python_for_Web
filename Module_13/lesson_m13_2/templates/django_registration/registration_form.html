@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+{%load crispy_forms_tags %}
+{%block content%}
+
+
+<div class="registration-form-container">
+    <h1><center>Create GymSchedule Account</center></h1>
+<form method="post">
+    {%csrf_token%}
+    {{ form|crispy }}
+<button type="submit" class="btn btn-sm btn-outline-primary">Create</button>
+</form>
+</div>
+{%endblock%}
