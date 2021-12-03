@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<p>
+ <h2>Noted by:</h2>
+ {{ note.author.username }}
+
+<h2>You need to do next:</h2>
+{{note.body}}
+<h2>When</h2>
+{{note.timestamp.strftime('%Y-%m-%d')}}
+</p>
+<h4>Want to delete?</h4>
+<a href="{{ url_for('notes.delete_note', note_id=note.id) }}">Delete</a>
+<h4>Want to make some changes?</h4>
+<a href="{{ url_for('notes.update_note', note_id=note.id) }}">Update</a>
+<h4>Want to send to your mail?</h4>
+<a href="{{ url_for('notes.send_email', note_id=note.id) }}">Send email</a>
+{% endblock %}

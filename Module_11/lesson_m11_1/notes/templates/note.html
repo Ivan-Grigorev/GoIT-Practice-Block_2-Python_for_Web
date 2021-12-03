@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Note</title>
+</head>
+<body>
+<p>
+ <h2>Noted by:</h2>
+ {{ note.author.username }}
+
+<h2>You need to do next:</h2>
+{{note.body}}
+<h2>When</h2>
+{{note.timestamp.strftime('%Y-%m-%d')}}
+</p>
+<h4>Want to delete?</h4>
+<a href="{{ url_for('delete_note', note_id=note.id) }}">Delete</a>
+</body>
+</html>

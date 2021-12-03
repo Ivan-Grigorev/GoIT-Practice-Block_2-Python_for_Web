@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hi, {{ current_user.username }}!</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.note.label }}<br>
+            {{ form.note(cols=32, rows=4) }}<br>
+            {% for error in form.note.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+    {% for note in notes %}
+    <p>
+    {{ note.author.username }} noted already: <b>{{ note.body }}</b>
+        <a href="{{ url_for('note', note_id=note.id) }}">See details</a>
+    </p>
+    {% endfor %}
+{% endblock %}
