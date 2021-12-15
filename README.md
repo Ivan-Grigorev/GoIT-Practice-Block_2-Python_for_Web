@@ -1,2 +1,3 @@
-### Go_IT - Practice
-## Block 2 - Python_for_Web
+# Go IT - Practice
+### Block 2 - Python for Web
+Course materials
