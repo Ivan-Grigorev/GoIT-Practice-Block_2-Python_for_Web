@@ -1,6 +1,4 @@
 
-
-
 class Config:
     SECRET_KEY = 'your-not-pass'
     SQLALCHEMY_DATABASE_URI = "sqlite:///new.db"

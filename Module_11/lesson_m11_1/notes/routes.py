@@ -1,7 +1,7 @@
 from flask import render_template, flash, redirect, url_for
-from Module_11.lesson_m11_1.notes import app, db
-from Module_11.lesson_m11_1.notes.forms import LoginForm, RegistrationForm, NoteForm
-from Module_11.lesson_m11_1.notes.models import User, Note
+from notes import app, db
+from notes.forms import LoginForm, RegistrationForm, NoteForm
+from notes.models import User, Note
 from flask_login import current_user, login_user, logout_user, login_required
 
 

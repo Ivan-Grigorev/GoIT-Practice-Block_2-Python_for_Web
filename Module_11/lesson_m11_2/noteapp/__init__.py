@@ -16,8 +16,8 @@ mail = Mail(app)
 
 
 from noteapp.models import User, Note
-from noteapp.auth.routes import auth_bp
-from noteapp.notes.routes import note_bp
+from Module_11.lesson_m11_2.noteapp.auth.routes import auth_bp
+from Module_11.lesson_m11_2.noteapp.notes.routes import note_bp
 
 app.register_blueprint(auth_bp)
 app.register_blueprint(note_bp)
