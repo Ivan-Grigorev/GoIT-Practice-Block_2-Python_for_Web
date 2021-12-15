@@ -1,1 +1,1 @@
-# Go_IT-Practice-Block_2-Python_for_Web
+# Go IT - Practice - Block 2 - Python for Web
