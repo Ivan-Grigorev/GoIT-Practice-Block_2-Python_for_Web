@@ -45,4 +45,3 @@ async def update_item(item: int, value: str):
         return ItemValue(item=item, value=db[item])
     else:
         return ItemValue(status='FAIL')
-

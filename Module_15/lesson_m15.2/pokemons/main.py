@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from models import Pokemon
 import aiohttp
 
+
 app = FastAPI()
 
 
