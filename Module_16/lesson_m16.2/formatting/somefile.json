@@ -1,0 +1,28 @@
+[
+    {
+        "type": "warning",
+        "module": "example",
+        "obj": "calculate_sum",
+        "line": 12,
+        "column": 4,
+        "endLine": 12,
+        "endColumn": 48,
+        "path": "example.py",
+        "symbol": "logging-fstring-interpolation",
+        "message": "Use lazy % formatting in logging functions",
+        "message-id": "W1203"
+    },
+    {
+        "type": "warning",
+        "module": "example",
+        "obj": "calculate_mul",
+        "line": 18,
+        "column": 4,
+        "endLine": 18,
+        "endColumn": 51,
+        "path": "example.py",
+        "symbol": "logging-fstring-interpolation",
+        "message": "Use lazy % formatting in logging functions",
+        "message-id": "W1203"
+    }
+]

@@ -1,0 +1,7 @@
+************* Module example
+C:\Users\dexxxed\PycharmProjects\module16_2\formatting\example.py:12:4: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+C:\Users\dexxxed\PycharmProjects\module16_2\formatting\example.py:18:4: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+
+------------------------------------------------------------------
+Your code has been rated at 8.33/10 (previous run: 8.33/10, +0.00)
+
